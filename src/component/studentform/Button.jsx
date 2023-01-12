@@ -12,7 +12,7 @@ class Button extends Component {
       <>
         <button
           onClick={() => addNewStudent()}
-          className="btn btn-success animate__animated animate__bounceInRight">Thêm sinh viên +</button>
+          className="btn btn-success animate__animated animate__bounceInRight animate__faster">Thêm sinh viên +</button>
       </>
     );
   }

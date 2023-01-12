@@ -104,8 +104,8 @@ class StudentForm extends Component {
                             <Button addNewStudent={this.addNewStudent} /> :
                             <button
                                 onClick={this.updateStudent}
-                                className='btn btn-danger animate__animated animate__backInLeft'>
-                                Update
+                                className='btn btn-danger animate__animated animate__backInLeft animate__faster'>
+                                Cập nhật
                             </button>}
 
 

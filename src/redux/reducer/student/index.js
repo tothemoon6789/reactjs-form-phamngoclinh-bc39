@@ -1,4 +1,4 @@
-import { ADD_NEW_STUDENT, UPDATE, MODIFY, SEARCH_STUDENT, DELETE_STUDENT, ADD_OR_UPDATE, MES_ALERT} from './constant'
+import { ADD_NEW_STUDENT, UPDATE, MODIFY, SEARCH_STUDENT, DELETE_STUDENT, ADD_OR_UPDATE, MES_ALERT } from './constant'
 const initialStudent = {
     studentArr: [
         { id: 1, name: "Pham ngoc linh", phone: "0902485744", email: "pnlinh6789@gmail.com" },
@@ -62,7 +62,14 @@ const studentReducer = (state = initialStudent, action) => {
                             phone: action.payload.phone,
                             email: action.payload.email,
                         } : student
-                    })
+                    }),
+                    studentDefault: {
+                        ...state.studentDefault,
+                        id: "",
+                        name: "",
+                        phone: "",
+                        email: "",
+                    }
 
                 }
             }
@@ -86,7 +93,7 @@ const studentReducer = (state = initialStudent, action) => {
                 ...state,
                 add: action.payload
             }
-        case MES_ALERT: 
+        case MES_ALERT:
             return {
                 ...state,
                 alert: action.payload
